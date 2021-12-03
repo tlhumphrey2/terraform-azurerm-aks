@@ -1,0 +1,960 @@
+[0m[1mrandom_password.admin: Refreshing state... [id=none][0m
+[0m[1mrandom_string.random: Refreshing state... [id=lukxdduyyvahaohfagpfzfijbjjezbnbpiamghtgpul][0m
+[0m[1mmodule.resource_group.azurerm_resource_group.rg: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2][0m
+[0m[1mmodule.virtual_network.module.subnet["iaas-public"].azurerm_network_security_group.nsg: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-public-security-group][0m
+[0m[1mmodule.virtual_network.module.subnet["iaas-private"].azurerm_network_security_group.nsg: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-private-security-group][0m
+[0m[1mmodule.kubernetes.azurerm_user_assigned_identity.aks[0]: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-app-myhpcc-terraform-eastus2-tlhumphrey2-default-control-plane][0m
+[0m[1mmodule.virtual_network.azurerm_virtual_network.vnet: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet][0m
+[0m[1mmodule.virtual_network.azurerm_route_table.route_table["default"]: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/routeTables/app-myhpcc-sandbox-eastus2-default-routetable][0m
+[0m[1mmodule.virtual_network.module.subnet["iaas-public"].azurerm_subnet.subnet: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public][0m
+[0m[1mmodule.virtual_network.module.subnet["iaas-private"].azurerm_subnet.subnet: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private][0m
+[0m[1mmodule.virtual_network.module.subnet["iaas-public"].azurerm_subnet_network_security_group_association.subnet_nsg: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public][0m
+[0m[1mmodule.virtual_network.module.subnet["iaas-private"].azurerm_subnet_network_security_group_association.subnet_nsg: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private][0m
+[0m[1mmodule.virtual_network.azurerm_subnet_route_table_association.association["iaas-public"]: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public][0m
+[0m[1mmodule.virtual_network.azurerm_subnet_route_table_association.association["iaas-private"]: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private][0m
+[0m[1mazurerm_network_security_rule.ingress_internet_admin: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-public-security-group/securityRules/HPCC_Admin][0m
+[0m[1mmodule.kubernetes.azurerm_role_assignment.route_table_network_contributor[0]: Refreshing state... [id=/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/routeTables/app-myhpcc-sandbox-eastus2-default-routetable/providers/Microsoft.Authorization/roleAssignments/7b99d3c6-8187-286b-9ecc-78256c4aa9c1][0m
+[0m
+[1m[36mNote:[0m[1m Objects have changed outside of Terraform[0m
+
+[0mTerraform detected the following changes made outside of Terraform since the
+last "terraform apply":
+
+[1m  # module.resource_group.azurerm_resource_group.rg[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_resource_group" "rg" {
+      [31m-[0m [0m[1m[0mid[0m[0m       = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m = "eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m     = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m     = {
+          [31m-[0m [0m"admin"               = "Timothy Humphrey"
+          [31m-[0m [0m"business_unit"       = "Infrastructure"
+          [31m-[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"environment"         = "Sandbox"
+          [31m-[0m [0m"location"            = "East US 2"
+          [31m-[0m [0m"market"              = "United States"
+          [31m-[0m [0m"owner"               = "Timothy Humphrey"
+          [31m-[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"product_group"       = "solutionslab"
+          [31m-[0m [0m"product_name"        = "myhpcc"
+          [31m-[0m [0m"provider"            = "azurerm"
+          [31m-[0m [0m"resource_group_type" = "Application"
+          [31m-[0m [0m"sre_team"            = "solutionslab"
+          [31m-[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [31m-[0m [0m"subscription_type"   = "Development"
+          [31m-[0m [0m"terraform"           = "true"
+        } [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.azurerm_virtual_network.vnet[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_virtual_network" "vnet" {
+      [31m-[0m [0m[1m[0maddress_space[0m[0m         = [
+          [31m-[0m [0m"10.1.0.0/22",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdns_servers[0m[0m           = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mguid[0m[0m                  = "249c3101-96a4-4763-909e-7b3d63936bf9" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                    = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m              = "eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                  = "solutionslab-dev-eastus2-vnet" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m   = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet[0m[0m                = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                  = {
+          [31m-[0m [0m"admin"               = "Timothy Humphrey"
+          [31m-[0m [0m"business_unit"       = "Infrastructure"
+          [31m-[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"environment"         = "Sandbox"
+          [31m-[0m [0m"location"            = "East US 2"
+          [31m-[0m [0m"market"              = "United States"
+          [31m-[0m [0m"owner"               = "Timothy Humphrey"
+          [31m-[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"product_group"       = "solutionslab"
+          [31m-[0m [0m"product_name"        = "myhpcc"
+          [31m-[0m [0m"provider"            = "azurerm"
+          [31m-[0m [0m"resource_group_type" = "Application"
+          [31m-[0m [0m"sre_team"            = "solutionslab"
+          [31m-[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [31m-[0m [0m"subscription_type"   = "Development"
+          [31m-[0m [0m"terraform"           = "true"
+        } [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvm_protection_enabled[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.azurerm_route_table.route_table["default"][0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_route_table" "route_table" {
+      [31m-[0m [0m[1m[0mdisable_bgp_route_propagation[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                            = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/routeTables/app-myhpcc-sandbox-eastus2-default-routetable" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m                      = "eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                          = "app-myhpcc-sandbox-eastus2-default-routetable" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m           = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute[0m[0m                         = [
+          [31m-[0m [0m{
+              [31m-[0m [0maddress_prefix         = "0.0.0.0/0"
+              [31m-[0m [0mname                   = "internet"
+              [31m-[0m [0mnext_hop_in_ip_address = ""
+              [31m-[0m [0mnext_hop_type          = "Internet"
+            },
+          [31m-[0m [0m{
+              [31m-[0m [0maddress_prefix         = "10.1.0.0/22"
+              [31m-[0m [0mname                   = "local-vnet"
+              [31m-[0m [0mnext_hop_in_ip_address = ""
+              [31m-[0m [0mnext_hop_type          = "VnetLocal"
+            },
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnets[0m[0m                       = [] [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.azurerm_subnet_route_table_association.association["iaas-private"][0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet_route_table_association" "association" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/routeTables/app-myhpcc-sandbox-eastus2-default-routetable" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.azurerm_subnet_route_table_association.association["iaas-public"][0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet_route_table_association" "association" {
+      [31m-[0m [0m[1m[0mid[0m[0m             = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mroute_table_id[0m[0m = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/routeTables/app-myhpcc-sandbox-eastus2-default-routetable" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m      = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.module.subnet["iaas-private"].azurerm_network_security_group.nsg[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_security_group" "nsg" {
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-private-security-group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "app-myhpcc-iaas-private-security-group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_rule[0m[0m       = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = {
+          [31m-[0m [0m"admin"               = "Timothy Humphrey"
+          [31m-[0m [0m"business_unit"       = "Infrastructure"
+          [31m-[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"environment"         = "Sandbox"
+          [31m-[0m [0m"location"            = "East US 2"
+          [31m-[0m [0m"market"              = "United States"
+          [31m-[0m [0m"owner"               = "Timothy Humphrey"
+          [31m-[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"product_group"       = "solutionslab"
+          [31m-[0m [0m"product_name"        = "myhpcc"
+          [31m-[0m [0m"provider"            = "azurerm"
+          [31m-[0m [0m"resource_group_type" = "Application"
+          [31m-[0m [0m"sre_team"            = "solutionslab"
+          [31m-[0m [0m"subnet_type"         = "IaaS Private"
+          [31m-[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [31m-[0m [0m"subscription_type"   = "Development"
+          [31m-[0m [0m"terraform"           = "true"
+        } [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.module.subnet["iaas-private"].azurerm_subnet.subnet[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet" "subnet" {
+      [31m-[0m [0m[1m[0maddress_prefix[0m[0m                                 = "10.1.0.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [31m-[0m [0m"10.1.0.0/24",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = false [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                                             = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                                           = "iaas-private" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m                            = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mservice_endpoints[0m[0m                              = [
+          [31m-[0m [0m"Microsoft.Storage",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "solutionslab-dev-eastus2-vnet" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.module.subnet["iaas-private"].azurerm_subnet_network_security_group_association.subnet_nsg[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet_network_security_group_association" "subnet_nsg" {
+      [31m-[0m [0m[1m[0mid[0m[0m                        = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_security_group_id[0m[0m = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-private-security-group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m                 = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-private" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.module.subnet["iaas-public"].azurerm_network_security_group.nsg[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_security_group" "nsg" {
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-public-security-group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "app-myhpcc-iaas-public-security-group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msecurity_rule[0m[0m       = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtags[0m[0m                = {
+          [31m-[0m [0m"admin"               = "Timothy Humphrey"
+          [31m-[0m [0m"business_unit"       = "Infrastructure"
+          [31m-[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"environment"         = "Sandbox"
+          [31m-[0m [0m"location"            = "East US 2"
+          [31m-[0m [0m"market"              = "United States"
+          [31m-[0m [0m"owner"               = "Timothy Humphrey"
+          [31m-[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [31m-[0m [0m"product_group"       = "solutionslab"
+          [31m-[0m [0m"product_name"        = "myhpcc"
+          [31m-[0m [0m"provider"            = "azurerm"
+          [31m-[0m [0m"resource_group_type" = "Application"
+          [31m-[0m [0m"sre_team"            = "solutionslab"
+          [31m-[0m [0m"subnet_type"         = "IaaS Public"
+          [31m-[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [31m-[0m [0m"subscription_type"   = "Development"
+          [31m-[0m [0m"terraform"           = "true"
+        } [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.module.subnet["iaas-public"].azurerm_subnet.subnet[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet" "subnet" {
+      [31m-[0m [0m[1m[0maddress_prefix[0m[0m                                 = "10.1.1.0/24" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [31m-[0m [0m"10.1.1.0/24",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = true [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                                             = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                                           = "iaas-public" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m                            = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mservice_endpoints[0m[0m                              = [] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "solutionslab-dev-eastus2-vnet" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.virtual_network.module.subnet["iaas-public"].azurerm_subnet_network_security_group_association.subnet_nsg[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_subnet_network_security_group_association" "subnet_nsg" {
+      [31m-[0m [0m[1m[0mid[0m[0m                        = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_security_group_id[0m[0m = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-public-security-group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msubnet_id[0m[0m                 = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/virtualNetworks/solutionslab-dev-eastus2-vnet/subnets/iaas-public" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # azurerm_network_security_rule.ingress_internet_admin[0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_network_security_rule" "ingress_internet_admin" {
+      [31m-[0m [0m[1m[0maccess[0m[0m                      = "Allow" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdestination_address_prefix[0m[0m  = "*" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdestination_port_ranges[0m[0m     = [
+          [31m-[0m [0m"8010",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mdirection[0m[0m                   = "Inbound" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                          = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/networkSecurityGroups/app-myhpcc-iaas-public-security-group/securityRules/HPCC_Admin" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                        = "HPCC_Admin" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mnetwork_security_group_name[0m[0m = "app-myhpcc-iaas-public-security-group" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mpriority[0m[0m                    = 100 [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprotocol[0m[0m                    = "tcp" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m         = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msource_address_prefixes[0m[0m     = [
+          [31m-[0m [0m"209.243.48.0/20",
+          [31m-[0m [0m"23.102.106.89",
+          [31m-[0m [0m"66.241.32.0/19",
+        ] [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0msource_port_range[0m[0m           = "*" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.kubernetes.azurerm_role_assignment.route_table_network_contributor[0][0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_role_assignment" "route_table_network_contributor" {
+      [31m-[0m [0m[1m[0mid[0m[0m                   = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/routeTables/app-myhpcc-sandbox-eastus2-default-routetable/providers/Microsoft.Authorization/roleAssignments/7b99d3c6-8187-286b-9ecc-78256c4aa9c1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                 = "7b99d3c6-8187-286b-9ecc-78256c4aa9c1" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_id[0m[0m         = "3f162674-b93f-4e5e-97fe-c027cc500f53" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_type[0m[0m       = "ServicePrincipal" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrole_definition_id[0m[0m   = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/providers/Microsoft.Authorization/roleDefinitions/4d97b98b-1d4f-4787-a291-c67834d212e7" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mrole_definition_name[0m[0m = "Network Contributor" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mscope[0m[0m                = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.Network/routeTables/app-myhpcc-sandbox-eastus2-default-routetable" [90m->[0m [0m[90mnull[0m[0m
+    }
+[1m  # module.kubernetes.azurerm_user_assigned_identity.aks[0][0m has been deleted[0m[0m
+[0m  [31m-[0m[0m resource "azurerm_user_assigned_identity" "aks" {
+      [31m-[0m [0m[1m[0mclient_id[0m[0m           = "f47889d9-edad-4f16-bac7-9ec580089623" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mid[0m[0m                  = "/subscriptions/49219efc-701f-4c7e-a2ac-c600308a69e3/resourceGroups/app-myhpcc-sandbox-eastus2/providers/Microsoft.ManagedIdentity/userAssignedIdentities/aks-app-myhpcc-terraform-eastus2-tlhumphrey2-default-control-plane" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mlocation[0m[0m            = "eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mname[0m[0m                = "aks-app-myhpcc-terraform-eastus2-tlhumphrey2-default-control-plane" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mprincipal_id[0m[0m        = "3f162674-b93f-4e5e-97fe-c027cc500f53" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mresource_group_name[0m[0m = "app-myhpcc-sandbox-eastus2" [90m->[0m [0m[90mnull[0m[0m
+      [31m-[0m [0m[1m[0mtenant_id[0m[0m           = "bc877e61-f6cf-4461-accd-0565fa4ca357" [90m->[0m [0m[90mnull[0m[0m
+    }
+
+Unless you have made equivalent changes to your configuration, or ignored the
+relevant attributes using ignore_changes, the following plan may include
+actions to undo or respond to these changes.
+[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Terraform used the selected providers to generate the following execution
+plan. Resource actions are indicated with the following symbols:
+  [32m+[0m create
+[0m
+Terraform will perform the following actions:
+
+[1m  # azurerm_network_security_rule.ingress_internet_admin[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_security_rule" "ingress_internet_admin" {
+      [32m+[0m [0m[1m[0maccess[0m[0m                      = "Allow"
+      [32m+[0m [0m[1m[0mdestination_address_prefix[0m[0m  = "*"
+      [32m+[0m [0m[1m[0mdestination_port_ranges[0m[0m     = [
+          [32m+[0m [0m"8010",
+        ]
+      [32m+[0m [0m[1m[0mdirection[0m[0m                   = "Inbound"
+      [32m+[0m [0m[1m[0mid[0m[0m                          = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                        = "HPCC_Admin"
+      [32m+[0m [0m[1m[0mnetwork_security_group_name[0m[0m = "app-myhpcc-iaas-public-security-group"
+      [32m+[0m [0m[1m[0mpriority[0m[0m                    = 100
+      [32m+[0m [0m[1m[0mprotocol[0m[0m                    = "tcp"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m         = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0msource_address_prefixes[0m[0m     = [
+          [32m+[0m [0m"209.243.48.0/20",
+          [32m+[0m [0m"23.102.106.89",
+          [32m+[0m [0m"66.241.32.0/19",
+        ]
+      [32m+[0m [0m[1m[0msource_port_range[0m[0m           = "*"
+    }
+
+[1m  # helm_release.hpcc[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "helm_release" "hpcc" {
+      [32m+[0m [0m[1m[0matomic[0m[0m                     = false
+      [32m+[0m [0m[1m[0mchart[0m[0m                      = "hpcc"
+      [32m+[0m [0m[1m[0mcleanup_on_fail[0m[0m            = false
+      [32m+[0m [0m[1m[0mcreate_namespace[0m[0m           = true
+      [32m+[0m [0m[1m[0mdependency_update[0m[0m          = false
+      [32m+[0m [0m[1m[0mdisable_crd_hooks[0m[0m          = false
+      [32m+[0m [0m[1m[0mdisable_openapi_validation[0m[0m = false
+      [32m+[0m [0m[1m[0mdisable_webhooks[0m[0m           = false
+      [32m+[0m [0m[1m[0mforce_update[0m[0m               = false
+      [32m+[0m [0m[1m[0mid[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0mlint[0m[0m                       = false
+      [32m+[0m [0m[1m[0mmanifest[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mmax_history[0m[0m                = 0
+      [32m+[0m [0m[1m[0mmetadata[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                       = "myhpcc-hpcc"
+      [32m+[0m [0m[1m[0mnamespace[0m[0m                  = "default"
+      [32m+[0m [0m[1m[0mrecreate_pods[0m[0m              = false
+      [32m+[0m [0m[1m[0mrender_subchart_notes[0m[0m      = true
+      [32m+[0m [0m[1m[0mreplace[0m[0m                    = false
+      [32m+[0m [0m[1m[0mrepository[0m[0m                 = "https://hpcc-systems.github.io/helm-chart/"
+      [32m+[0m [0m[1m[0mreset_values[0m[0m               = false
+      [32m+[0m [0m[1m[0mreuse_values[0m[0m               = false
+      [32m+[0m [0m[1m[0mskip_crds[0m[0m                  = false
+      [32m+[0m [0m[1m[0mstatus[0m[0m                     = "deployed"
+      [32m+[0m [0m[1m[0mtimeout[0m[0m                    = 900
+      [32m+[0m [0m[1m[0mvalues[0m[0m                     = [
+          [32m+[0m [0m<<-EOT
+                "sasha":
+                  "dfuwu-archiver":
+                    "plane": "sasha"
+                  "wu-archiver":
+                    "plane": "sasha"
+                "storage":
+                  "planes":
+                  - "category": "dali"
+                    "name": "dali"
+                    "prefix": "/var/lib/HPCCSystems/dalistorage"
+                    "storageClass": "azurefile"
+                    "storageSize": "10Gi"
+                  - "category": "dll"
+                    "name": "dll"
+                    "prefix": "/var/lib/HPCCSystems/queries"
+                    "storageClass": "azurefile"
+                    "storageSize": "4Gi"
+                  - "category": "sasha"
+                    "name": "sasha"
+                    "prefix": "/var/lib/HPCCSystems/sashastorage"
+                    "storageClass": "azurefile"
+                    "storageSize": "2Gi"
+                  - "category": "data"
+                    "name": "data"
+                    "prefix": "/var/lib/HPCCSystems/hpcc-data"
+                    "storageClass": "azurefile"
+                    "storageSize": "10Gi"
+                  - "category": "lz"
+                    "name": "mydropzone"
+                    "prefix": "/var/lib/HPCCSystems/mydropzone"
+                    "storageClass": "azurefile"
+                    "storageSize": "10Gi"
+            EOT,
+          [32m+[0m [0m<<-EOT
+                esp:
+                - name: eclwatch
+                  ## Pre-configured esp applications include eclwatch, eclservices, and eclqueries
+                  application: eclwatch
+                  auth: none
+                  replicas: 1
+                  service:
+                    ## port can be used to change the local port used by the pod. If omitted, the default port (8880) is used
+                    port: 8888
+                    ## servicePort controls the port that this service will be exposed on, either internally to the cluster, or externally
+                    servicePort: 8010
+                    ## Specify visibility: local (or global) if you want the service available from outside the cluster. Typically, eclwatch and wsecl are published externally, while eclservices is designed for internal use.
+                    visibility: global
+                    ## Annotations can be specified on a service - for example to specify provider-specific information such as service.beta.kubernetes.io/azure-load-balancer-internal-subnet
+                    #annotations:
+                    #  service.beta.kubernetes.io/azure-load-balancer-internal-subnet: "mysubnet"
+                    ## You can also specify labels on a service
+                    #labels:
+                    #  mylabel: "3"
+                  #resources:
+                  #  cpu: "1"
+                  #  memory: "2G"
+                - name: eclservices
+                  application: eclservices
+                  auth: none
+                  replicas: 1
+                  service:
+                    servicePort: 8010
+                    visibility: cluster
+                  #resources:
+                  #  cpu: "250m"
+                  #  memory: "1G"
+                - name: eclqueries
+                  application: eclqueries
+                  auth: none
+                  replicas: 1
+                  service:
+                    visibility: local
+                    servicePort: 8002
+                  #resources:
+                  #  cpu: "250m"
+                  #  memory: "1G"
+                - name: esdl-sandbox
+                  application: esdl-sandbox
+                  auth: none
+                  replicas: 1
+                  service:
+                    visibility: local
+                    servicePort: 8899
+                  #resources:
+                  #  cpu: "250m"
+                  #  memory: "1G"
+                - name: sql2ecl
+                  application: sql2ecl
+                  auth: none
+                  replicas: 1
+                  service:
+                    visibility: local
+                    servicePort: 8510
+                  #domain: hpccsql.com
+                  #resources:
+                  #  cpu: "250m"
+                  #  memory: "1G"
+            EOT,
+          [32m+[0m [0m<<-EOT
+                eclccserver:
+                - name: myeclccserver
+                  replicas: 1
+                  ## Set to false if you want to launch each workunit compile in its own container, true to run as child processes in eclccserver pod.
+                  useChildProcesses: true
+                  ## maxActive controls how many workunit compiles may be active at once (per replica)
+                  maxActive: 2
+                  ## Specify a list of queues to listen on if you don't want this eclccserver listening on all queues. If empty or missing, listens on all queues
+                  listen: []
+                  ## The following allows eclcc options (names start with a -) and debug options to be defined for each of the workunits that are compiled.
+                  #options:
+                  #- name: globalAutoHoist
+                  #  value: false
+                  #  cluster: name   # optional cluster this is applied to
+                
+                  ## The following resources apply to child compile pods when useChildProcesses=false, otherwise they apply to eclccserver pod.
+                  #resources:
+                  #  cpu: "1"
+                  #  memory: "4G"
+            EOT,
+          [32m+[0m [0m<<-EOT
+                thor:
+                - name: thor
+                  prefix: thor
+                  numWorkers: 2
+                  maxJobs: 2
+                  maxGraphs: 2
+                  #managerResources:
+                  #  cpu: "1"
+                  #  memory: "2G"
+                  #workerResources:
+                  #  cpu: "4"
+                  #  memory: "4G"
+                  #eclAgentResources:
+                  #  cpu: "1"
+                  #  memory: "2G"
+            EOT,
+          [32m+[0m [0m<<-EOT
+                eclagent:
+                - name: hthor
+                  ## replicas indicates how many eclagent pods should be started
+                  replicas: 1
+                  ## maxActive controls how many workunits may be active at once (per replica)
+                  maxActive: 2
+                  ## prefix may be used to set a filename prefix applied to any relative filenames used by jobs submitted to this queue
+                  prefix: hthor
+                  ## Set to false if you want to launch each workunit in its own container, true to run as child processes in eclagent pod
+                  useChildProcesses: true
+                  ## type may be 'hthor' (the default) or 'roxie', to specify that the roxie engine rather than the hthor engine should be used for eclagent workunit processing
+                  type: hthor
+                  ## The following resources apply to child hThor pods when useChildProcesses=false, otherwise they apply to hThor pod.
+                  #resources:
+                  #  cpu: "1"
+                  #  memory: "1G"
+            EOT,
+          [32m+[0m [0m<<-EOT
+                roxie:
+                - name: roxie
+                  disabled: true
+                  prefix: roxie
+                  services:
+                  - name: roxie
+                    servicePort: 9876
+                    listenQueue: 200
+                    numThreads: 30
+                    visibility: local
+                  ## replicas indicates the number of replicas per channel
+                  replicas: 1
+                  numChannels: 2
+                  ## Set serverReplicas to indicate a separate replicaSet of roxie servers, with agent nodes not acting as servers
+                  serverReplicas: 0
+                  ## Set localAgent to true for a scalable cluster of "single-node" roxie servers, each implementing all channels locally
+                  localAgent: true
+                  ## Adjust traceLevel to taste (1 is default)
+                  traceLevel: 1
+                  ## Set mtuPayload to the maximum amount of data Roxie will put in a single packet. This should be just less than the system MTU. Default is 1400
+                  # mtuPayload: 3800
+                  #channelResources:
+                  #  cpu: "4"
+                  #  memory: "4G"
+                  #serverResources:
+                  #  cpu: "1"
+                  #  memory: "1G"
+                  # Roxie may take a while to start up if there are a lot of queries to load. Yuo may need to 
+                  #override the default startup/readiness probing by setting these values
+                  #minStartupTime: 30      # How long to wait before initiating startup probing
+                  #maxStartupTime: 600     # Maximum time to wait for startup to complete before failing
+                  topoServer:
+                    replicas: 1
+            EOT,
+          [32m+[0m [0m<<-EOT
+                "thor":
+                - "maxGraphs": 2
+                  "maxJobs": 3
+                  "name": "thor"
+                  "numWorkers": 2
+                  "prefix": "thor"
+            EOT,
+        ]
+      [32m+[0m [0m[1m[0mverify[0m[0m                     = false
+      [32m+[0m [0m[1m[0mversion[0m[0m                    = "8.2.20"
+      [32m+[0m [0m[1m[0mwait[0m[0m                       = true
+      [32m+[0m [0m[1m[0mwait_for_jobs[0m[0m              = false
+    }
+
+[1m  # null_resource.az[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "null_resource" "az" {
+      [32m+[0m [0m[1m[0mid[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mtriggers[0m[0m = (known after apply)
+    }
+
+[1m  # module.kubernetes.azurerm_kubernetes_cluster.aks[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_kubernetes_cluster" "aks" {
+      [32m+[0m [0m[1m[0mapi_server_authorized_ip_ranges[0m[0m     = [
+          [32m+[0m [0m"209.243.48.0/20",
+          [32m+[0m [0m"23.102.106.89/32",
+          [32m+[0m [0m"66.241.32.0/19",
+        ]
+      [32m+[0m [0m[1m[0mdns_prefix[0m[0m                          = "myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0mfqdn[0m[0m                                = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                                  = (known after apply)
+      [32m+[0m [0m[1m[0mkube_admin_config[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mkube_admin_config_raw[0m[0m               = (sensitive value)
+      [32m+[0m [0m[1m[0mkube_config[0m[0m                         = (known after apply)
+      [32m+[0m [0m[1m[0mkube_config_raw[0m[0m                     = (sensitive value)
+      [32m+[0m [0m[1m[0mkubernetes_version[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                            = "eastus2"
+      [32m+[0m [0m[1m[0mname[0m[0m                                = "app-myhpcc-terraform-eastus2-tlhumphrey2-default"
+      [32m+[0m [0m[1m[0mnode_resource_group[0m[0m                 = "MC_app-myhpcc-terraform-eastus2-tlhumphrey2-default"
+      [32m+[0m [0m[1m[0mprivate_cluster_enabled[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_cluster_public_fqdn_enabled[0m[0m = false
+      [32m+[0m [0m[1m[0mprivate_dns_zone_id[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_fqdn[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mprivate_link_enabled[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m                 = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0msku_tier[0m[0m                            = "Free"
+      [32m+[0m [0m[1m[0mtags[0m[0m                                = {
+          [32m+[0m [0m"admin"               = "Timothy Humphrey"
+          [32m+[0m [0m"business_unit"       = "Infrastructure"
+          [32m+[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"environment"         = "Sandbox"
+          [32m+[0m [0m"location"            = "East US 2"
+          [32m+[0m [0m"market"              = "United States"
+          [32m+[0m [0m"owner"               = "Timothy Humphrey"
+          [32m+[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"product_group"       = "solutionslab"
+          [32m+[0m [0m"product_name"        = "myhpcc"
+          [32m+[0m [0m"provider"            = "azurerm"
+          [32m+[0m [0m"resource_group_type" = "Application"
+          [32m+[0m [0m"sre_team"            = "solutionslab"
+          [32m+[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [32m+[0m [0m"subscription_type"   = "Development"
+          [32m+[0m [0m"terraform"           = "true"
+        }
+
+      [32m+[0m [0maddon_profile {
+
+          [32m+[0m [0mazure_policy {
+              [32m+[0m [0m[1m[0menabled[0m[0m = false
+            }
+
+          [32m+[0m [0mkube_dashboard {
+              [32m+[0m [0m[1m[0menabled[0m[0m = false
+            }
+        }
+
+      [32m+[0m [0mauto_scaler_profile {
+          [32m+[0m [0m[1m[0mbalance_similar_node_groups[0m[0m      = (known after apply)
+          [32m+[0m [0m[1m[0mempty_bulk_delete_max[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mexpander[0m[0m                         = (known after apply)
+          [32m+[0m [0m[1m[0mmax_graceful_termination_sec[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0mmax_node_provisioning_time[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mmax_unready_nodes[0m[0m                = (known after apply)
+          [32m+[0m [0m[1m[0mmax_unready_percentage[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mnew_pod_scale_up_delay[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_delay_after_add[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_delay_after_delete[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_delay_after_failure[0m[0m   = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_unneeded[0m[0m              = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_unready[0m[0m               = (known after apply)
+          [32m+[0m [0m[1m[0mscale_down_utilization_threshold[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mscan_interval[0m[0m                    = (known after apply)
+          [32m+[0m [0m[1m[0mskip_nodes_with_local_storage[0m[0m    = (known after apply)
+          [32m+[0m [0m[1m[0mskip_nodes_with_system_pods[0m[0m      = (known after apply)
+        }
+
+      [32m+[0m [0mdefault_node_pool {
+          [32m+[0m [0m[1m[0mavailability_zones[0m[0m           = [
+              [32m+[0m [0m"1",
+              [32m+[0m [0m"2",
+              [32m+[0m [0m"3",
+            ]
+          [32m+[0m [0m[1m[0menable_auto_scaling[0m[0m          = true
+          [32m+[0m [0m[1m[0menable_host_encryption[0m[0m       = false
+          [32m+[0m [0m[1m[0menable_node_public_ip[0m[0m        = false
+          [32m+[0m [0m[1m[0mkubelet_disk_type[0m[0m            = (known after apply)
+          [32m+[0m [0m[1m[0mmax_count[0m[0m                    = 2
+          [32m+[0m [0m[1m[0mmax_pods[0m[0m                     = (known after apply)
+          [32m+[0m [0m[1m[0mmin_count[0m[0m                    = 1
+          [32m+[0m [0m[1m[0mname[0m[0m                         = "system"
+          [32m+[0m [0m[1m[0mnode_count[0m[0m                   = (known after apply)
+          [32m+[0m [0m[1m[0mnode_labels[0m[0m                  = (known after apply)
+          [32m+[0m [0m[1m[0monly_critical_addons_enabled[0m[0m = false
+          [32m+[0m [0m[1m[0morchestrator_version[0m[0m         = (known after apply)
+          [32m+[0m [0m[1m[0mos_disk_size_gb[0m[0m              = (known after apply)
+          [32m+[0m [0m[1m[0mos_disk_type[0m[0m                 = "Managed"
+          [32m+[0m [0m[1m[0mos_sku[0m[0m                       = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m                         = "VirtualMachineScaleSets"
+          [32m+[0m [0m[1m[0multra_ssd_enabled[0m[0m            = false
+          [32m+[0m [0m[1m[0mvm_size[0m[0m                      = "Standard_B2s"
+
+          [32m+[0m [0mupgrade_settings {
+              [32m+[0m [0m[1m[0mmax_surge[0m[0m = "1"
+            }
+        }
+
+      [32m+[0m [0midentity {
+          [32m+[0m [0m[1m[0mprincipal_id[0m[0m              = (known after apply)
+          [32m+[0m [0m[1m[0mtenant_id[0m[0m                 = (known after apply)
+          [32m+[0m [0m[1m[0mtype[0m[0m                      = "UserAssigned"
+          [32m+[0m [0m[1m[0muser_assigned_identity_id[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mkubelet_identity {
+          [32m+[0m [0m[1m[0mclient_id[0m[0m                 = (known after apply)
+          [32m+[0m [0m[1m[0mobject_id[0m[0m                 = (known after apply)
+          [32m+[0m [0m[1m[0muser_assigned_identity_id[0m[0m = (known after apply)
+        }
+
+      [32m+[0m [0mnetwork_profile {
+          [32m+[0m [0m[1m[0mdns_service_ip[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0mdocker_bridge_cidr[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mload_balancer_sku[0m[0m  = "standard"
+          [32m+[0m [0m[1m[0mnetwork_mode[0m[0m       = (known after apply)
+          [32m+[0m [0m[1m[0mnetwork_plugin[0m[0m     = "azure"
+          [32m+[0m [0m[1m[0mnetwork_policy[0m[0m     = (known after apply)
+          [32m+[0m [0m[1m[0moutbound_type[0m[0m      = "loadBalancer"
+          [32m+[0m [0m[1m[0mpod_cidr[0m[0m           = (known after apply)
+          [32m+[0m [0m[1m[0mservice_cidr[0m[0m       = (known after apply)
+
+          [32m+[0m [0mload_balancer_profile {
+              [32m+[0m [0m[1m[0meffective_outbound_ips[0m[0m    = (known after apply)
+              [32m+[0m [0m[1m[0midle_timeout_in_minutes[0m[0m   = (known after apply)
+              [32m+[0m [0m[1m[0mmanaged_outbound_ip_count[0m[0m = (known after apply)
+              [32m+[0m [0m[1m[0moutbound_ip_address_ids[0m[0m   = (known after apply)
+              [32m+[0m [0m[1m[0moutbound_ip_prefix_ids[0m[0m    = (known after apply)
+              [32m+[0m [0m[1m[0moutbound_ports_allocated[0m[0m  = (known after apply)
+            }
+        }
+
+      [32m+[0m [0mrole_based_access_control {
+          [32m+[0m [0m[1m[0menabled[0m[0m = false
+        }
+
+      [32m+[0m [0mwindows_profile {
+          [32m+[0m [0m[1m[0madmin_password[0m[0m = (sensitive value)
+          [32m+[0m [0m[1m[0madmin_username[0m[0m = (known after apply)
+          [32m+[0m [0m[1m[0mlicense[0m[0m        = (known after apply)
+        }
+    }
+
+[1m  # module.kubernetes.azurerm_kubernetes_cluster_node_pool.additional["addpool1"][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_kubernetes_cluster_node_pool" "additional" {
+      [32m+[0m [0m[1m[0mavailability_zones[0m[0m     = [
+          [32m+[0m [0m"1",
+          [32m+[0m [0m"2",
+          [32m+[0m [0m"3",
+        ]
+      [32m+[0m [0m[1m[0menable_auto_scaling[0m[0m    = true
+      [32m+[0m [0m[1m[0menable_host_encryption[0m[0m = false
+      [32m+[0m [0m[1m[0menable_node_public_ip[0m[0m  = false
+      [32m+[0m [0m[1m[0mid[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mkubelet_disk_type[0m[0m      = (known after apply)
+      [32m+[0m [0m[1m[0mkubernetes_cluster_id[0m[0m  = (known after apply)
+      [32m+[0m [0m[1m[0mmax_count[0m[0m              = 2
+      [32m+[0m [0m[1m[0mmax_pods[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mmin_count[0m[0m              = 1
+      [32m+[0m [0m[1m[0mmode[0m[0m                   = "User"
+      [32m+[0m [0m[1m[0mname[0m[0m                   = "addpool1"
+      [32m+[0m [0m[1m[0mnode_count[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mnode_labels[0m[0m            = (known after apply)
+      [32m+[0m [0m[1m[0morchestrator_version[0m[0m   = (known after apply)
+      [32m+[0m [0m[1m[0mos_disk_size_gb[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0mos_disk_type[0m[0m           = "Managed"
+      [32m+[0m [0m[1m[0mos_sku[0m[0m                 = (known after apply)
+      [32m+[0m [0m[1m[0mos_type[0m[0m                = "Linux"
+      [32m+[0m [0m[1m[0mpriority[0m[0m               = "Regular"
+      [32m+[0m [0m[1m[0mspot_max_price[0m[0m         = -1
+      [32m+[0m [0m[1m[0multra_ssd_enabled[0m[0m      = false
+      [32m+[0m [0m[1m[0mvm_size[0m[0m                = "Standard_A2_V2"
+
+      [32m+[0m [0mupgrade_settings {
+          [32m+[0m [0m[1m[0mmax_surge[0m[0m = "1"
+        }
+    }
+
+[1m  # module.kubernetes.azurerm_role_assignment.route_table_network_contributor[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_role_assignment" "route_table_network_contributor" {
+      [32m+[0m [0m[1m[0mid[0m[0m                               = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_id[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_type[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_id[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_name[0m[0m             = "Network Contributor"
+      [32m+[0m [0m[1m[0mscope[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mskip_service_principal_aad_check[0m[0m = (known after apply)
+    }
+
+[1m  # module.kubernetes.azurerm_role_assignment.subnet_network_contributor["private"][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_role_assignment" "subnet_network_contributor" {
+      [32m+[0m [0m[1m[0mid[0m[0m                               = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_id[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_type[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_id[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_name[0m[0m             = "Network Contributor"
+      [32m+[0m [0m[1m[0mscope[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mskip_service_principal_aad_check[0m[0m = (known after apply)
+    }
+
+[1m  # module.kubernetes.azurerm_role_assignment.subnet_network_contributor["public"][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_role_assignment" "subnet_network_contributor" {
+      [32m+[0m [0m[1m[0mid[0m[0m                               = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                             = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_id[0m[0m                     = (known after apply)
+      [32m+[0m [0m[1m[0mprincipal_type[0m[0m                   = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_id[0m[0m               = (known after apply)
+      [32m+[0m [0m[1m[0mrole_definition_name[0m[0m             = "Network Contributor"
+      [32m+[0m [0m[1m[0mscope[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mskip_service_principal_aad_check[0m[0m = (known after apply)
+    }
+
+[1m  # module.kubernetes.azurerm_user_assigned_identity.aks[0][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_user_assigned_identity" "aks" {
+      [32m+[0m [0m[1m[0mclient_id[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "eastus2"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "aks-app-myhpcc-terraform-eastus2-tlhumphrey2-default-control-plane"
+      [32m+[0m [0m[1m[0mprincipal_id[0m[0m        = (known after apply)
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0mtenant_id[0m[0m           = (known after apply)
+    }
+
+[1m  # module.resource_group.azurerm_resource_group.rg[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_resource_group" "rg" {
+      [32m+[0m [0m[1m[0mid[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m = "eastus2"
+      [32m+[0m [0m[1m[0mname[0m[0m     = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0mtags[0m[0m     = {
+          [32m+[0m [0m"admin"               = "Timothy Humphrey"
+          [32m+[0m [0m"business_unit"       = "Infrastructure"
+          [32m+[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"environment"         = "Sandbox"
+          [32m+[0m [0m"location"            = "East US 2"
+          [32m+[0m [0m"market"              = "United States"
+          [32m+[0m [0m"owner"               = "Timothy Humphrey"
+          [32m+[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"product_group"       = "solutionslab"
+          [32m+[0m [0m"product_name"        = "myhpcc"
+          [32m+[0m [0m"provider"            = "azurerm"
+          [32m+[0m [0m"resource_group_type" = "Application"
+          [32m+[0m [0m"sre_team"            = "solutionslab"
+          [32m+[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [32m+[0m [0m"subscription_type"   = "Development"
+          [32m+[0m [0m"terraform"           = "true"
+        }
+    }
+
+[1m  # module.virtual_network.azurerm_route_table.route_table["default"][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_route_table" "route_table" {
+      [32m+[0m [0m[1m[0mdisable_bgp_route_propagation[0m[0m = true
+      [32m+[0m [0m[1m[0mid[0m[0m                            = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m                      = "eastus2"
+      [32m+[0m [0m[1m[0mname[0m[0m                          = "app-myhpcc-sandbox-eastus2-default-routetable"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m           = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0mroute[0m[0m                         = [
+          [32m+[0m [0m{
+              [32m+[0m [0maddress_prefix         = "0.0.0.0/0"
+              [32m+[0m [0mname                   = "internet"
+              [32m+[0m [0mnext_hop_in_ip_address = [90mnull[0m[0m
+              [32m+[0m [0mnext_hop_type          = "Internet"
+            },
+          [32m+[0m [0m{
+              [32m+[0m [0maddress_prefix         = "10.1.0.0/22"
+              [32m+[0m [0mname                   = "local-vnet"
+              [32m+[0m [0mnext_hop_in_ip_address = [90mnull[0m[0m
+              [32m+[0m [0mnext_hop_type          = "vnetlocal"
+            },
+        ]
+      [32m+[0m [0m[1m[0msubnets[0m[0m                       = (known after apply)
+    }
+
+[1m  # module.virtual_network.azurerm_subnet_route_table_association.association["iaas-private"][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet_route_table_association" "association" {
+      [32m+[0m [0m[1m[0mid[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mroute_table_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m      = (known after apply)
+    }
+
+[1m  # module.virtual_network.azurerm_subnet_route_table_association.association["iaas-public"][0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet_route_table_association" "association" {
+      [32m+[0m [0m[1m[0mid[0m[0m             = (known after apply)
+      [32m+[0m [0m[1m[0mroute_table_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m      = (known after apply)
+    }
+
+[1m  # module.virtual_network.azurerm_virtual_network.vnet[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_virtual_network" "vnet" {
+      [32m+[0m [0m[1m[0maddress_space[0m[0m         = [
+          [32m+[0m [0m"10.1.0.0/22",
+        ]
+      [32m+[0m [0m[1m[0mdns_servers[0m[0m           = (known after apply)
+      [32m+[0m [0m[1m[0mguid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mid[0m[0m                    = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m              = "eastus2"
+      [32m+[0m [0m[1m[0mname[0m[0m                  = "solutionslab-dev-eastus2-vnet"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m   = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0msubnet[0m[0m                = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                  = {
+          [32m+[0m [0m"admin"               = "Timothy Humphrey"
+          [32m+[0m [0m"business_unit"       = "Infrastructure"
+          [32m+[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"environment"         = "Sandbox"
+          [32m+[0m [0m"location"            = "East US 2"
+          [32m+[0m [0m"market"              = "United States"
+          [32m+[0m [0m"owner"               = "Timothy Humphrey"
+          [32m+[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"product_group"       = "solutionslab"
+          [32m+[0m [0m"product_name"        = "myhpcc"
+          [32m+[0m [0m"provider"            = "azurerm"
+          [32m+[0m [0m"resource_group_type" = "Application"
+          [32m+[0m [0m"sre_team"            = "solutionslab"
+          [32m+[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [32m+[0m [0m"subscription_type"   = "Development"
+          [32m+[0m [0m"terraform"           = "true"
+        }
+      [32m+[0m [0m[1m[0mvm_protection_enabled[0m[0m = false
+    }
+
+[1m  # module.virtual_network.module.subnet["iaas-private"].azurerm_network_security_group.nsg[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_security_group" "nsg" {
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "eastus2"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "app-myhpcc-iaas-private-security-group"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0msecurity_rule[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                = {
+          [32m+[0m [0m"admin"               = "Timothy Humphrey"
+          [32m+[0m [0m"business_unit"       = "Infrastructure"
+          [32m+[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"environment"         = "Sandbox"
+          [32m+[0m [0m"location"            = "East US 2"
+          [32m+[0m [0m"market"              = "United States"
+          [32m+[0m [0m"owner"               = "Timothy Humphrey"
+          [32m+[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"product_group"       = "solutionslab"
+          [32m+[0m [0m"product_name"        = "myhpcc"
+          [32m+[0m [0m"provider"            = "azurerm"
+          [32m+[0m [0m"resource_group_type" = "Application"
+          [32m+[0m [0m"sre_team"            = "solutionslab"
+          [32m+[0m [0m"subnet_type"         = "IaaS Private"
+          [32m+[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [32m+[0m [0m"subscription_type"   = "Development"
+          [32m+[0m [0m"terraform"           = "true"
+        }
+    }
+
+[1m  # module.virtual_network.module.subnet["iaas-private"].azurerm_subnet.subnet[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet" "subnet" {
+      [32m+[0m [0m[1m[0maddress_prefix[0m[0m                                 = (known after apply)
+      [32m+[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [32m+[0m [0m"10.1.0.0/24",
+        ]
+      [32m+[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = false
+      [32m+[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = false
+      [32m+[0m [0m[1m[0mid[0m[0m                                             = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                                           = "iaas-private"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m                            = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0mservice_endpoints[0m[0m                              = [
+          [32m+[0m [0m"Microsoft.Storage",
+        ]
+      [32m+[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "solutionslab-dev-eastus2-vnet"
+    }
+
+[1m  # module.virtual_network.module.subnet["iaas-private"].azurerm_subnet_network_security_group_association.subnet_nsg[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet_network_security_group_association" "subnet_nsg" {
+      [32m+[0m [0m[1m[0mid[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_security_group_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m                 = (known after apply)
+    }
+
+[1m  # module.virtual_network.module.subnet["iaas-public"].azurerm_network_security_group.nsg[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_network_security_group" "nsg" {
+      [32m+[0m [0m[1m[0mid[0m[0m                  = (known after apply)
+      [32m+[0m [0m[1m[0mlocation[0m[0m            = "eastus2"
+      [32m+[0m [0m[1m[0mname[0m[0m                = "app-myhpcc-iaas-public-security-group"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0msecurity_rule[0m[0m       = (known after apply)
+      [32m+[0m [0m[1m[0mtags[0m[0m                = {
+          [32m+[0m [0m"admin"               = "Timothy Humphrey"
+          [32m+[0m [0m"business_unit"       = "Infrastructure"
+          [32m+[0m [0m"email"               = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"environment"         = "Sandbox"
+          [32m+[0m [0m"location"            = "East US 2"
+          [32m+[0m [0m"market"              = "United States"
+          [32m+[0m [0m"owner"               = "Timothy Humphrey"
+          [32m+[0m [0m"owner_email"         = "tlhumphrey2@gmail.com"
+          [32m+[0m [0m"product_group"       = "solutionslab"
+          [32m+[0m [0m"product_name"        = "myhpcc"
+          [32m+[0m [0m"provider"            = "azurerm"
+          [32m+[0m [0m"resource_group_type" = "Application"
+          [32m+[0m [0m"sre_team"            = "solutionslab"
+          [32m+[0m [0m"subnet_type"         = "IaaS Public"
+          [32m+[0m [0m"subscription_id"     = "49219efc-701f-4c7e-a2ac-c600308a69e3"
+          [32m+[0m [0m"subscription_type"   = "Development"
+          [32m+[0m [0m"terraform"           = "true"
+        }
+    }
+
+[1m  # module.virtual_network.module.subnet["iaas-public"].azurerm_subnet.subnet[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet" "subnet" {
+      [32m+[0m [0m[1m[0maddress_prefix[0m[0m                                 = (known after apply)
+      [32m+[0m [0m[1m[0maddress_prefixes[0m[0m                               = [
+          [32m+[0m [0m"10.1.1.0/24",
+        ]
+      [32m+[0m [0m[1m[0menforce_private_link_endpoint_network_policies[0m[0m = true
+      [32m+[0m [0m[1m[0menforce_private_link_service_network_policies[0m[0m  = true
+      [32m+[0m [0m[1m[0mid[0m[0m                                             = (known after apply)
+      [32m+[0m [0m[1m[0mname[0m[0m                                           = "iaas-public"
+      [32m+[0m [0m[1m[0mresource_group_name[0m[0m                            = "app-myhpcc-sandbox-eastus2"
+      [32m+[0m [0m[1m[0mservice_endpoints[0m[0m                              = []
+      [32m+[0m [0m[1m[0mvirtual_network_name[0m[0m                           = "solutionslab-dev-eastus2-vnet"
+    }
+
+[1m  # module.virtual_network.module.subnet["iaas-public"].azurerm_subnet_network_security_group_association.subnet_nsg[0m will be created[0m[0m
+[0m  [32m+[0m[0m resource "azurerm_subnet_network_security_group_association" "subnet_nsg" {
+      [32m+[0m [0m[1m[0mid[0m[0m                        = (known after apply)
+      [32m+[0m [0m[1m[0mnetwork_security_group_id[0m[0m = (known after apply)
+      [32m+[0m [0m[1m[0msubnet_id[0m[0m                 = (known after apply)
+    }
+
+[0m[1mPlan:[0m 20 to add, 0 to change, 0 to destroy.
+[0m[90m
+─────────────────────────────────────────────────────────────────────────────[0m
+
+Note: You didn't use the -out option to save this plan, so Terraform can't
+guarantee to take exactly these actions if you run "terraform apply" now.

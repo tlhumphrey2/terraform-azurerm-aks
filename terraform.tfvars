@@ -4,7 +4,7 @@
 # Value type: string
 # Example entry: "my-product"
 
-product_name="tlhhpcc"
+product_name="tlh2hpcc"
 
 #------------------------------------------------------------------------------
 
@@ -37,11 +37,10 @@ node_size="Standard_F2"
 
 #------------------------------------------------------------------------------
 
-# The maximum number of VM nodes to allocate for the HPCC Systems node pool.
 # Must be 2 or more.
 # Value type: integer
 
-max_node_count=2
+max_node_count=4
 
 #------------------------------------------------------------------------------
 

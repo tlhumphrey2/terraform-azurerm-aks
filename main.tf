@@ -1,3 +1,11 @@
+resource "null_resource" "set_k8_credentials_for_kubectl" {
+  provisioner "local-exec" {
+    command="rm -f ~/.kube/config;az aks get-credentials --name ${module.kubernetes.name} --resource-group ${module.resource_group.name} --admin"
+  }
+
+  depends_on = [module.resource_group,module.kubernetes]
+}
+
 resource "random_string" "random" {
   length  = 43
   upper   = false

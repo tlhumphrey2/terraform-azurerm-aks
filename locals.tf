@@ -1,7 +1,13 @@
+resource "random_string" "random_3_characters" {
+  length  = 3
+  special = false
+  upper   = false
+}
+
 locals {
   metadata = {
     project             = "hpcc_k8s"
-    product_name        = var.product_name
+    product_name        = format("%s%s",var.product,random_string.random_3_characters.result)
     business_unit       = "infra"
     environment         = "sandbox"
     market              = "us"

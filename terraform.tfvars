@@ -4,7 +4,7 @@
 # Value type: string
 # Example entry: "my-product"
 
-product_name="tlh2hpcc"
+product_name="aks_"
 
 #------------------------------------------------------------------------------
 

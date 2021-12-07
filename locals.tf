@@ -7,7 +7,7 @@ resource "random_string" "random_3_characters" {
 locals {
   metadata = {
     project             = "hpcc_k8s"
-    product_name        = format("%s%s",var.product,random_string.random_3_characters.result)
+    product_name        = format("%s%s",var.product_name,random_string.random_3_characters.result)
     business_unit       = "infra"
     environment         = "sandbox"
     market              = "us"

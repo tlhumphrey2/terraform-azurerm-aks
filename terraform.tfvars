@@ -4,7 +4,7 @@
 # Value type: string
 # Example entry: "my-product"
 
-product_name="aks_"
+product_name="aks"
 
 #------------------------------------------------------------------------------
 
@@ -48,7 +48,7 @@ max_node_count=4
 # Value type: string
 # Example entry: "jane.doe@hpccsystems.com"
 
-admin_email="tlhumphrey2@gmail.com"
+admin_email="jane.doe@hpccsystems.com"
 
 #------------------------------------------------------------------------------
 
@@ -56,7 +56,7 @@ admin_email="tlhumphrey2@gmail.com"
 # Value type: string
 # Example entry: "Jane Doe"
 
-admin_name="Timothy Humphrey"
+admin_name="Jane Doe"
 
 #------------------------------------------------------------------------------
 
@@ -64,7 +64,7 @@ admin_name="Timothy Humphrey"
 # Value type: string
 # Example entry: "jdoe"
 
-admin_username="tlhumphrey2"
+admin_username="jdoe"
 
 #------------------------------------------------------------------------------
 
